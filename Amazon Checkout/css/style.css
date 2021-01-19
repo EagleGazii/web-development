@@ -1,0 +1,130 @@
+* {
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+   
+    font-weight:bold;
+    
+}
+form{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding: 10px;
+    font-size:24px; /*1em=24px*/
+    
+    
+}
+
+input, select, textarea{
+    background-color:  rgb(0, 250, 0,0.5);
+    border-radius: 8px;
+}
+
+/*1. container*/
+.container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 30px 0;
+   
+}
+/*1.1. detail*/
+.details{
+    flex: 3;  
+}
+/*1.1.1. adress*/
+.address-box .form-group{
+    display: flex;
+    margin: 12px;
+}
+
+/*1.1.1.1. label*/
+.address-box .form-group  label{
+    flex: 1;
+    text-align: right;
+    margin-right: 1em;
+    
+}
+
+/*1.1.1.2. input*/
+.address-box .form-group  input{
+    flex: 3;
+    font-size: 1em;
+}
+/*1.1.2 shipping*/
+.shipping{
+    text-align: center;
+    
+}
+/*1.1.2.1*/
+.shipping select{
+    font-size: 1em;
+    margin-top: 0.5em;
+}
+
+/*1.1.3. payment-type*/
+.payment-types{
+    margin: 0.5em;
+    text-align: center;
+    
+}
+/*1.1.3.1 second div in payment-type*/
+.payment-types div:nth-child(2){
+    display: flex;
+    margin: 0.5em;
+}
+/*1.1.3.2 all of label inside second div in payment-type */
+.payment-types div:nth-child(2) label{
+    flex: 1;
+}
+/*1.1.4. checks*/
+.checks{
+    display: flex;
+    text-align: center;
+}
+.checks label{
+    flex: 1;  
+}
+.checks label:nth-child(1){
+    order: 2;
+}
+.checks label:nth-child(2){
+    order: 1;
+}
+
+
+/*1.2. comment*/
+.comment{
+    flex: 1;   
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+
+}
+.comment textarea{
+    flex: 1;
+    border: 1px black solid;
+}
+
+
+
+/*2. submit*/
+.submit{
+    margin-top: auto;  
+    text-align: center; 
+    
+}
+.submit button{
+    width: 100%;
+    font-size: 1.7em;
+    color: azure;
+    background-color: deepskyblue;
+    border-radius: 8px;
+}
+
+
+
+
