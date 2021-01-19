@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+/*Convert a container to a flex box*/
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.column{
+    flex:1;
+    min-width: 300px;
+}
+img{
+    width: 100%;
+}
+.column:nth-child(1){
+    background-color: palevioletred;
+}
+.column:nth-child(2){
+    background-color: orange;
+}
+.column:nth-child(3){
+    background-color: skyblue;
+}
+.column:nth-child(4){
+    background-color: greenyellow;
+}
