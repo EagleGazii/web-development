@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 0;
+}
+#container > div{
+    font-size: 24px;
+    padding: 5px;
+    /* margin: 2px; */
+    text-align: center;
+    background-color: skyblue;
+}
+#container{
+    padding: 5px;
+    background-color: steelblue;
+    display: grid;
+    height: 100vh;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 250px 1fr 250px;
+    /*grid-template-rows: repeat(4,1fr);*/
+    /*1fr=25% 1fr=25% 1fr=25% 1fr=25% if we increase the height of
+    container the rows height will increase too*/
+    /*grid-template-columns: repeat(auto-fill, minmax(300px,1fr));*/
+    /*grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+     if we have not to much content we can use auto-fit but
+     if you have to much content you need use auto-fill -> 
+     in screen maximum columns created*/
+    /*grid-template-columns: repeat(4,minmax(300px,1fr)); four rows and four columns*/
+    /*repeat(x,y) - repeat x times y*/
+    /*minmax(x,y) - if the space is more than 500px the content 
+    with be 1fr -  1 fraction is 100% if the free space is 
+    smaller than 500px the content will be 500px - free space +
+    add more space*/
+    grid-gap:5px;
+    /*set the height of any estra rows outside the template(implicit-grid) */
+    grid-auto-rows: 50px;
+/*     grid-auto-columns: 200px;
+    grid-auto-flow: column; */
+    /*grid-area*/
+    grid-template-areas: 
+    "facebook facebook facebook"
+    "apple mac dell"
+    "hp hp hp";
+}
+#facebook{
+    grid-area: facebook;
+}
+#apple{
+    grid-area: apple;
+}
+#mac{
+    grid-area: mac;
+}
+#dell{
+    grid-area: dell;
+}
+#hp{
+    grid-area: hp;
+}
+@media all and (max-width: 700px){
+    #container{
+        grid-template-rows: 50px 1fr 1fr 50px;
+        grid-template-columns: 250px 1fr;
+        grid-template-areas: 
+        "facebook facebook"
+        "apple mac"
+        "apple dell"
+        "hp hp";
+        
+    }
+
+}
+@media all and (max-width: 500px){
+    #container{
+        grid-template-rows: 50px 1fr 1fr 1fr 50px;
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "facebook"
+        "apple"
+        "mac"
+        "dell"
+        "hp";
+    }
+}

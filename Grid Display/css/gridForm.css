@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+body, html{
+    padding: 0;
+    margin: 10px;
+}
+form{
+    background-color:  #89cfeb;
+    font-size: 24px;
+    padding: 5px;
+    display: grid;
+    grid-gap:5px;
+    grid-template-columns: [label] auto [input] 1fr;
+    /*[label] auto [input] 1fr; give name yo columns*/
+
+}
+form > label{
+    /* background-color: #bebc3c; */
+    grid-column: label; /*grid column just for labels*/
+    
+}
+form > input{
+    background-color: #f2ffa6;
+    font-size: 24px;
+    grid-column: input; /*grid column just for inputs*/
+}
+form > input[type="submit"]{
+    grid-column: span 2;
+    /*submit button will span over 2 columns*/
+}
+/* @media all and (max-width: 610px){
+    form > label{
+        display: none;
+    }
+    form p{
+        display: none;
+    }
+} */
